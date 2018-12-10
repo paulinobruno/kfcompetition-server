@@ -1,0 +1,122 @@
+{
+  // collections
+  "competitions": {
+    "_id": "abc123",
+    "name": "Campeonato Paulista de Kung Fu",
+    "edition": "12o",
+    "institution": "LPKF - Liga Paulista de Kung Fu",
+    "happeningOn": "2019-05-26T03:00:00.0000Z",
+    "createdAt": "2018-12-10T11:23:00.000Z",
+    "updatedAt": "2018-12-10T11:23:00.000Z",
+    // Upload no Google Drive
+    "driveFolder": "0BwwA4oUTeiV1TGRPeTVjaWRDY1E"
+  },
+  "delegations": {
+    "_id": "123456",
+    "head": "Afonso",
+    "school": "Internacional Chiu Chi Ling - Filial Pirituba",
+    "city": "São Paulo",
+    "state": "SP"
+  },
+  "competitors": {
+    "name": "Bruno Paulino",
+    "affiliate": false,
+    "gender": "MALE",
+    "birthDate": "1986-03-16T03:00:00.000Z",
+    "cpf": "11122233344", // Novo,
+    "yearsOfTraining": 9,
+    "currentStyle": "Hung Gar",
+    "phone": "1198888777",
+    "email": "paulino.bruno@gmail.com",
+    "agreedWithTerms": true,
+    "delegationId": "123456",
+    "subscriptions": [
+      {
+        "competitionId": "abc123",
+        "categories": [
+          {
+            "type": "SIMPLE",
+            "name": "SOUTHERN"
+          },
+          {
+            "type": "SIMPLE",
+            "name": "LONG_WEAPON"
+          },
+          {
+            "type": "SIMPLE",
+            "name": "COMPULSORY_WUSHU"
+          },
+          {
+            "type": "COMBINED",
+            "name": "HANDS_FREE",
+            "partner": "Gilvan"
+          },
+          {
+            "type": "COMBINED",
+            "name": "WEAPONS",
+            "partner": "Afonso"
+          },
+          {
+            "type": "SANDA",
+            "name": "UNTIL_70"
+          },
+          {
+            "type": "SHUAI_JIAO",
+            "name": "UNTIL_70"
+          }
+        ]
+      }
+    ]
+  },
+
+
+
+
+  "sample": {
+    // "atleta": "BRUNO PAULINO",
+    // "filiado": false,
+    // "sexo": "MALE",
+    // "nascimento": "1986-03-16",
+    /////////////////////////////////////////////////////////////// "faixa etaria": 32, // NAO NECESSARIO
+    // "tempo de treino em anos": 9,
+    // "academia": "Inter Chiu Chi Ling - Pirituba",
+    // "estilo": "Hung Gar",
+    // "chefe delegacao": "Afonso",
+    // "local academia": "Sao Paulo - SP",
+    // "telefone": "11 98921-5025",
+    // "email": "paulino.bruno@gmail.com",
+    // "concorda com termos": true,
+    "categorias": [
+      {
+        "tipo": "simples",
+        "categoria": "maos do sul"
+      },
+      {
+        "tipo": "simples",
+        "categoria": "armas longas"
+      },
+      {
+        "tipo": "simples",
+        "categoria": "wushu compulsório"
+      },
+      {
+        "tipo": "luta combinada",
+        "categoria": "maos livres",
+        "parceiro": "Gilvan"
+      },
+      {
+        "tipo": "luta combinada",
+        "categoria": "armas",
+        "parceiro": "Afonso"
+      },
+      {
+        "tipo": "sanda",
+        "categoria": "até 70 kg"
+      },
+      {
+        "tipo": "shuai jiao",
+        "categoria": "até 70 kg"
+      }
+    ]
+  }
+}
