@@ -1,13 +1,15 @@
 #!/bin/bash
 
+DEBUG=paal:*
+NODE_PATH=src/main/server/
+export DEBUG NODE_PATH
+
 case "$1" in
   start)
     echo 'Starting server...'
-    DEBUG=paal:*
     PORT=5000
-    NODE_PATH=src/main/server/
     NODE_ENV=development
-    export DEBUG PORT NODE_PATH NODE_ENV
+    export PORT NODE_ENV
     nodemon src/main/server/bin/www $ENV
     exit 0
   ;;
@@ -21,10 +23,8 @@ case "$1" in
     MONGO_URI="mongodb://localhost/paal-kfcompetition-test"
     AUTH0_TOKEN_ENDPOINT="http://localhost:8888/oauth/token"
 
-    DEBUG=paal:test:*
-    NODE_PATH=src/main/server/
     NODE_ENV=test
-    export DEBUG NODE_PATH NODE_ENV MONGO_URI AUTH0_TOKEN_ENDPOINT
+    export NODE_ENV MONGO_URI AUTH0_TOKEN_ENDPOINT
 
     nyc mocha $MOCHA_OPTS src/tests/e2e/* src/tests/unit/*
   ;;
