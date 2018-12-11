@@ -1,0 +1,47 @@
+#!/usr/bin/env node
+
+const debug = require('debug')('paal:bin:www');
+
+require('dotenv').config();
+require('config/mongo')(process.env.MONGO_URI)
+  .then(() => {
+    const numCPUs = require('os').cpus().length;
+    const cluster = require('cluster');
+    const app = require('app');
+    const NODE_ENV = process.env.NODE_ENV;
+
+    const _onWorkerError = (code, signal) => {
+      logger.error('worker.died', {
+        err: 'worder died',
+        code: code,
+        signal: signal
+      });
+    }
+
+    const _raiseWorker = () => {
+      const worker = cluster.fork();
+      worker.on('error', _onWorkerError);
+    }
+
+    if (cluster.isMaster && NODE_ENV !== 'development') {
+      for (let i = 0; i < numCPUs; i++) {
+        _raiseWorker();
+      }
+
+      cluster.on('exit', (worker, code, signal) => {
+        _raiseWorker();
+        debug('a new worker rises', worker.process.pid);
+      });
+    } else {
+      const server = app.listen(app.get('port'), () => {
+        debug('app started', app.get('env'), app.get('port'))
+      });
+      server.on('error', (err) => {
+        logger.error('server.error', { err: err });
+      });
+    }
+  })
+  .catch(() => {
+    debug('MongoDB unavailable');
+    process.exit(1);
+  });

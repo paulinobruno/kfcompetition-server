@@ -1,0 +1,32 @@
+{
+  "search.exclude": {
+    ".DS_Store": true,
+    "dist": true,
+    "build": true,
+    "node_modules": true,
+    "dump.rdb": true,
+    "# Logs": true,
+    "logs": true,
+    "*.log": true,
+    "*.log.*": true,
+    "# Coverage": true,
+    ".nyc_output/": true,
+    "coverage*": true,
+    "node_modules/**": true
+  },
+  "files.exclude": {
+    ".DS_Store": true,
+    "dist": true,
+    "build": true,
+    "node_modules": true,
+    "dump.rdb": true,
+    "# Logs": true,
+    "logs": true,
+    "*.log": true,
+    "*.log.*": true,
+    "# Coverage": true,
+    ".nyc_output/": true,
+    "coverage*": true,
+    "node_modules/**": true
+  }
+}
