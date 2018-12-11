@@ -18,7 +18,7 @@ case "$1" in
   test)
     echo 'Testing...'
     MOCHA_OPTS="--recursive --require src/tests/globalSetup.js --timeout 5000"
-    MONGO_URI="mongodb://localhost/paal-workout-test"
+    MONGO_URI="mongodb://localhost/paal-kfcompetition-test"
     AUTH0_TOKEN_ENDPOINT="http://localhost:8888/oauth/token"
 
     DEBUG=paal:test:*

@@ -1,13 +1,13 @@
-# paal-workout-server
-Node.js server for workout app
+# paal-kfcompetition-server
+Node.js server for Kung Fu Competition app
 # Deploy no Heroku
 
 ## Criando a aplicação
 
 ```
-$ heroku create paal-workout-server
+$ heroku create paal-kfcompetition-server
 $ heroku buildpacks:set https://github.com/heroku/heroku-buildpack-nodejs
-$ git remote add heroku https://git.heroku.com/paal-workout-server.git
+$ git remote add heroku https://git.heroku.com/paal-kfcompetition-server.git
 ```
 
 ## Comandos úteis

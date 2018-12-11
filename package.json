@@ -1,14 +1,14 @@
 {
-  "name": "paal-workout-server",
-  "version": "0.1.3",
-  "description": "Node.js server for workout app",
+  "name": "paal-kfcompetition-server",
+  "version": "0.0.1",
+  "description": "Node.js server for Kung Fu Competition system",
   "main": "index.js",
   "engines": {
     "node": "9.8.0"
   },
   "scripts": {
     "deploy": "sh ./script.sh deploy",
-    "patch": "npm version patch -m \"release: version %s\" && git push --tags && git push",
+    "patch": "npm version patch -m \":bookmark: release: version %s\" && git push --tags && git push",
     "precommit": "pretty-quick --staged --ignore-path=.prettierignore",
     "start": "sh ./script.sh start $ENV",
     "test": "sh ./script.sh test"
@@ -40,7 +40,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/paulinobruno/paal-workout-server.git"
+    "url": "git+https://github.com/paulinobruno/paal-kfcompetition-server.git"
   },
   "author": "Bruno Paulino",
   "license": "MIT",
@@ -50,7 +50,7 @@
     "express"
   ],
   "bugs": {
-    "url": "https://github.com/paulinobruno/paal-workout-server/issues"
+    "url": "https://github.com/paulinobruno/paal-kfcompetition-server/issues"
   },
-  "homepage": "https://github.com/paulinobruno/paal-workout-server#readme"
+  "homepage": "https://github.com/paulinobruno/paal-kfcompetition-server#readme"
 }
